@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:job_application/pages/home_page.dart';
-import 'package:job_application/pages/signin_page.dart';
-import 'package:job_application/pages/signup_page.dart';
 import 'package:job_application/pages/splash_page.dart';
 import 'package:job_application/pages/started_page.dart';
 
@@ -15,9 +12,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SplashPage(),
         '/started_page': (context) => GetStartedPage(),
-        '/sign-in': (context) => SignInPages(),
-        '/sign-up': (context) => SignUpPage(),
-        '/home': (context) => HomePage(),
       },
     );
   }
