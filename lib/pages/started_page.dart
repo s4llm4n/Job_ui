@@ -22,13 +22,37 @@ class GetStartedPage extends StatelessWidget {
             left: 30,
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Build Your Next \nFuture Career Like \na Master',
               style: GoogleFonts.poppins(
                 color: Colors.white,
                 fontSize: 32,
                 fontWeight: FontWeight.w400,
+                ),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              Text('10,000 jobs Available',
+              style: GoogleFonts.poppins(
+                color: Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.w300,
+              ),
+              ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 500),
+                  child: Container(
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Get Started',
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
