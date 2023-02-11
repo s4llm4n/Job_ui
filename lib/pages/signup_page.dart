@@ -27,7 +27,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 'assets/upload_pic.png',
                 width: 120,
                 height: 120,
-              )
+              ),
             ],
           ),
         ),
@@ -48,7 +48,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 'assets/show_images.png',
                 width: 120,
                 height: 120,
-              )
+              ),
             ],
           ),
         ),
