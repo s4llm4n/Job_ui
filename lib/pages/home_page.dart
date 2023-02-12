@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:job_application/theme.dart';
+import 'package:job_application/widgets/custom_list.dart';
+
 import 'package:job_application/widgets/job_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -78,8 +80,22 @@ class HomePage extends StatelessWidget {
                         width: 16,
                       ),
                       JobCard(
-                        text: 'Website Developer',
+                        text: 'App Desaigner',
                         imageUrl: 'assets/card_category_three.png',
+                      ),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      JobCard(
+                        text: 'Content Writer',
+                        imageUrl: 'assets/card_category_four.png',
+                      ),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      JobCard(
+                        text: 'Video Grapher',
+                        imageUrl: 'assets/card_category_five.png',
                       ),
                     ],
                   ),
@@ -100,33 +116,29 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 26, left: 24.0),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/google-icon.png',
-                      width: 45,
-                      height: 45,
-                    ),
-                    SizedBox(
-                      width: 27,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Front-End Developer',
-                          style: jobTextStyle,
-                        ),
-                        Text(
-                          'Google',
-                          style: companyTextStyle,
-                        )
-                      ],
-                    ),
-                  ],
+                padding: const EdgeInsets.only(top: 16, left: 6.0),
+                child: CustomList(
+                  imageUrl: 'assets/google-icon.png',
+                  jobTitle: 'Front-End Developer',
+                  companyName: 'Google',
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16, left: 6.0),
+                child: CustomList(
+                  imageUrl: 'assets/instagram-icon.png',
+                  jobTitle: 'UI Designer',
+                  companyName: 'Instagram',
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16, left: 6.0),
+                child: CustomList(
+                  imageUrl: 'assets/facebook-icon.png',
+                  jobTitle: 'Data Scientis',
+                  companyName: 'Facebook',
+                ),
+              )
             ],
           ),
         ),
@@ -134,16 +146,54 @@ class HomePage extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          header(),
-          SizedBox(
-            height: 20,
-          ),
-          body(),
-        ],
+      bottomNavigationBar: Container(
+        margin: EdgeInsets.only(top: 30),
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          showSelectedLabels: false,
+          unselectedItemColor: Color(0xffB3B5C4),
+          selectedItemColor: Color(0xff272C2F),
+          currentIndex: 0,
+          elevation: 0,
+          iconSize: 24,
+          items: [
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('assets/navbar_one.png'),
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('assets/navbar_two.png'),
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('assets/navbar_three.png'),
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('assets/navbar_four.png'),
+              ),
+              label: '',
+            ),
+          ],
+        ),
       ),
+      body:Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        header(),
+        SizedBox(
+          height: 20,
+        ),
+        body(),
+      ],
+    ),
     );
   }
 }
