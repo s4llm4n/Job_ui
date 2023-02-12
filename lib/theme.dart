@@ -29,3 +29,17 @@ TextStyle availableJobTextStyle = GoogleFonts.poppins(
 
 TextStyle titleList = GoogleFonts.poppins(
     color: Color(0xff272C2F), fontSize: 16, fontWeight: FontWeight.w400);
+
+TextStyle jobApplyTextStyle = GoogleFonts.poppins(
+    color: Color(0xff272C2F), fontSize: 20, fontWeight: FontWeight.w600);
+
+TextStyle titleRequirements = GoogleFonts.poppins(
+    color: Color(0xff272C2F), fontSize: 14, fontWeight: FontWeight.w500);
+
+TextStyle requirementsTextStyle = GoogleFonts.poppins(
+    color: Color(0xff272C2F), fontSize: 14, fontWeight: FontWeight.w300);
+
+TextStyle messageButtonTextStyle = GoogleFonts.poppins(
+    color: Color(0xffB3B5C4), fontSize: 14, fontWeight: FontWeight.w300);
+
+
